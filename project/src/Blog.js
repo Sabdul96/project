@@ -1,16 +1,36 @@
 import React, { useState } from "react";
 
-
 const Blog = () => {
-  const [title, setTitle] = useState("My Blog");
-  const [content, setContent] = useState("This is my blog post.");
+  const [posts, setPosts] = useState([]);
+
+  const addPost = (title, content) => {
+    const newPost = {
+      title: title,
+      content: content,
+    };
+    setPosts([...posts, newPost]);
+  };
+
+  const renderPosts = () => {
+    return (
+      <div>
+        {posts.map((post, index) => (
+          <div key={index}>
+            <h2>{post.title}</h2>
+            <p>{post.content}</p>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{content}</p>
-      {/* <button onClick={() => setTitle("New Title")}>Change Title</button>
-      <button onClick={() => setContent("New Content")}>Change Content</button> */}
+      <h1>My Blog</h1>
+      <button onClick={() => addPost("My First Post", "This is my first blog post.")}>
+        Add Post
+      </button>
+      {renderPosts()}
     </div>
   );
 };
