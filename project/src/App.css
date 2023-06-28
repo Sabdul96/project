@@ -21,10 +21,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(2, 2, 2);
+  font-family: Didot;
 }
 
 .App-link {
-  color: #e1f4fa;
+  color: #080808;
 }
 
