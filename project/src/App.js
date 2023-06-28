@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Blog from "./Blog";
+// import Register from "./Register";
 
 const App = () => {
   return (
