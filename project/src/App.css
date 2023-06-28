@@ -23,6 +23,7 @@
   font-size: calc(10px + 2vmin);
   color: rgb(2, 2, 2);
   font-family: Didot;
+  font-size: larger;
 }
 
 .App-link {
